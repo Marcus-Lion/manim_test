@@ -3,12 +3,13 @@ from manim import *
 # manim -pql main.py
 class HelloWorld(Scene):
     def construct(self):
+        t2c = {"M": YELLOW, "L": YELLOW, 'a': GREEN, 'i':GREEN}
         ml_t2c = {"M": YELLOW, "L": YELLOW}
         ai_t2c = {"A": GREEN, "I": GREEN}
 
         self.next_section("MLAI")
 
-        marcus_lion = Text("Marcus Lion", font_size=72, t2c = ml_t2c)
+        marcus_lion = Text("Marcus Lion", font_size=72, t2c = t2c)
         machine_learning = Text("Machine Learning", font_size=64, t2c = ml_t2c)
         artificial_intelligence = Text("Artificial Intelligence", font_size=64, t2c=ai_t2c)
 
@@ -34,7 +35,7 @@ class HelloWorld(Scene):
         self.clear()
 
         self.next_section("Marcus Lion rebuild")
-        marcus_lion = Text("Marcus Lion", font_size=72, t2c = ml_t2c)
+        marcus_lion = Text("Marcus Lion", font_size=72, t2c = t2c)
         self.add(marcus_lion)
         self.add(machine_learning)
         # self.add(artificial_intelligence)
