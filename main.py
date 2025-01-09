@@ -70,7 +70,9 @@ class HelloWorld(Scene):
         self.clear()
 
         t = marcus_lion
-        self.play(t[0:6].animate.shift(UP),
-                  t[6:].animate.shift(DOWN))
+        self.add(NumberPlane())
 
-        self.wait(10)
+        self.play(t[0:6].animate.move_to([0,0.6,0]),
+                  t[6:].animate.move_to([0,-0.6,0]))
+
+        self.wait(7)
