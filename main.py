@@ -2,7 +2,7 @@ from manim import *
 
 
 # manim -pql main.py
-class HelloWorld(Scene):
+class HelloWorld(MovingCameraScene):
     def construct(self):
         t2c = {"M": YELLOW, "L": YELLOW, 'a': GREEN, 'i':GREEN}
         ml_t2c = {"M": YELLOW, "L": YELLOW}
@@ -69,10 +69,13 @@ class HelloWorld(Scene):
         self.wait(0.5)
         self.clear()
 
+        self.next_section("Zoom Camera")
         t = marcus_lion
-        self.add(NumberPlane())
+        # self.add(NumberPlane())
 
         self.play(t[0:6].animate.move_to([0,0.6,0]),
                   t[6:].animate.move_to([0,-0.6,0]))
+
+        self.play(self.camera.frame.animate.set(width=t.width*1.8).move_to(t), run_time=2)
 
         self.wait(7)
