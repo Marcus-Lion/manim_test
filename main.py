@@ -55,7 +55,7 @@ class HelloWorld(Scene):
             arr.append(Transform(machine_learning[a].copy(), marcus_lion[b], run_time=tt, replace_mobject_with_target_in_scene=True))
 
         self.play(arr)
-        arr = []
+        arr.clear()
 
         for a, b, c in t_ai:
             if c:
