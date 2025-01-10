@@ -1,4 +1,4 @@
-# Marcus Lion Manim logo test
+# Marcus Lion Manim logo test 1600,400
 https://github.com/Marcus-Lion/manim_test
 
 ## Install Manim
