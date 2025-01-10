@@ -11,11 +11,11 @@ class HelloWorld(MovingCameraScene):
         self.next_section("MLAI")
 
         marcus_lion = Text("Marcus Lion", font_size=72, t2c=t2c)
-        machine_learning = Text("Machine Learning", font_size=64, t2c=ml_t2c)
-        artificial_intelligence = Text("Artificial Intelligence", font_size=64, t2c=ai_t2c)
+        machine_learning = Text("Machine Learning", font_size=48, t2c=ml_t2c)
+        artificial_intelligence = Text("Artificial Intelligence", font_size=48, t2c=ai_t2c)
 
-        machine_learning.to_edge(UP)
-        artificial_intelligence.to_edge(DOWN)
+        machine_learning.shift(UP*1.3)
+        artificial_intelligence.shift(DOWN*1.3)
 
         self.add(machine_learning)
         self.add(artificial_intelligence)
@@ -76,6 +76,6 @@ class HelloWorld(MovingCameraScene):
         self.play(t[0:6].animate.move_to([0,0.6,0]),
                   t[6:].animate.move_to([0,-0.6,0]))
 
-        self.play(self.camera.frame.animate.set(width=t.width*1.8).move_to(t), run_time=2)
+        self.play(self.camera.frame.animate.set(height=t.height).move_to(t), run_time=2)
 
         self.wait(7)

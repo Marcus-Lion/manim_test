@@ -7,7 +7,7 @@ https://github.com/Marcus-Lion/manim_test
 
 ## Generate
 ```
-manim -pql main.py -i
+manim -pql-r 1600,400 main.py -i
 ```
 
 ## Video
